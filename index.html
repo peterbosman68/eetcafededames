@@ -401,6 +401,68 @@
       margin-left: 12px;
     }
     .menu-item p { font-size: 0.88rem; color: var(--light-tan); line-height: 1.6; }
+    #reviews { background: #5c1825; color: var(--light-tan); }
+    #reviews .section-title { color: var(--warm-tan); }
+    #reviews .section-label { color: var(--warm-tan); }
+    .reviews-intro {
+      max-width: 760px;
+      color: rgba(245,240,232,0.85);
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      margin-top: 24px;
+      margin-bottom: 30px;
+    }
+    .review-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(201,169,122,0.3);
+      border-radius: 6px;
+      padding: 22px;
+      box-shadow: 0 8px 26px rgba(0,0,0,0.22);
+    }
+    .review-stars {
+      color: var(--warm-tan);
+      letter-spacing: 0.12em;
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+    }
+    .review-card p {
+      color: rgba(245,240,232,0.9);
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+    .review-author {
+      color: rgba(201,169,122,0.95);
+      font-size: 0.9rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .reviews-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+    .btn-secondary {
+      display: inline-block;
+      background: transparent;
+      color: var(--warm-tan);
+      border: 1px solid var(--warm-tan);
+      padding: 14px 26px;
+      text-decoration: none;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border-radius: 2px;
+      transition: background 0.3s, color 0.3s;
+    }
+    .btn-secondary:hover {
+      background: var(--warm-tan);
+      color: #442C1F;
+    }
     #contact { background: #442C1F; color: var(--light-tan); }
     #contact .section-title { color: var(--warm-tan); }
     #contact .section-label { color: var(--warm-tan); }
@@ -495,6 +557,7 @@
       <li><a href="#home">Home</a></li>
       <li><a href="#over">Over Ons</a></li>
       <li><a href="#menu">Menu</a></li>
+      <li><a href="#reviews">Reviews</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -577,10 +640,52 @@
     <div class="divider"></div>
 
     <div class="menu-pdf-links" style="display:flex; gap:24px; flex-wrap:wrap; justify-content:flex-start; margin-top:32px;">
-      <a href="Website-De-Dames_5_images/Menukaart%20(2).pdf" target="_blank" rel="noopener" class="btn-primary" aria-label="Bekijk de menukaart als PDF">&#128196; Menukaart</a>
+      <a href="Website-De-Dames_5_images/Menukaart.pdf" target="_blank" rel="noopener" class="btn-primary" aria-label="Bekijk de menukaart als PDF">&#128196; Menukaart</a>
       <a href="Website-De-Dames_5_images/Drankenkaart.pdf" target="_blank" rel="noopener" class="btn-primary" aria-label="Bekijk de drankenkaart als PDF">&#128196; Drankenkaart</a>
     </div>
 
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     REVIEWS — gratis alternatief zonder widget
+══════════════════════════════════════════ -->
+<section id="reviews" aria-labelledby="reviews-heading">
+  <div class="section-inner">
+    <p class="section-label">Google Reviews</p>
+    <h2 id="reviews-heading" class="section-title">Wat gasten over ons zeggen</h2>
+    <div class="divider"></div>
+
+    <p class="reviews-intro">
+      We tonen hier losse gastreacties en verwijzen je direct naar Google voor alle actuele beoordelingen.
+      Zo blijven we volledig gratis, zonder externe review-widget.
+    </p>
+
+    <div class="reviews-grid" aria-label="Google reviews informatieblokken">
+      <article class="review-card">
+        <p class="review-stars" aria-hidden="true">★★★★★</p>
+        <p>Bekijk op Google de meest recente beoordelingen van onze gasten.</p>
+        <p class="review-author">Actuele reviews</p>
+      </article>
+
+      <article class="review-card">
+        <p class="review-stars" aria-hidden="true">★★★★★</p>
+        <p>Lees ervaringen over sfeer, service, lunch en diner bij De Dames.</p>
+        <p class="review-author">Gastenervaringen</p>
+      </article>
+
+      <article class="review-card">
+        <p class="review-stars" aria-hidden="true">★★★★★</p>
+        <p>Wil je zelf een reactie achterlaten? Dat kan direct via onze Google vermelding.</p>
+        <p class="review-author">Zelf review plaatsen</p>
+      </article>
+    </div>
+
+    <div class="reviews-actions">
+      <a href="https://www.google.com/search?q=Eetcaf%C3%A9+De+Dames+Balk+reviews" target="_blank" rel="noopener" class="btn-primary" aria-label="Bekijk alle Google reviews van Eetcafé De Dames">Bekijk alle reviews op Google</a>
+      <a href="https://www.google.com/search?q=Eetcaf%C3%A9+De+Dames+Balk" target="_blank" rel="noopener" class="btn-secondary" aria-label="Open Eetcafé De Dames op Google">Open op Google</a>
+    </div>
   </div>
 </section>
 
