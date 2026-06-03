@@ -414,7 +414,7 @@
     }
     .reviews-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 20px;
       margin-top: 24px;
       margin-bottom: 30px;
@@ -445,8 +445,9 @@
     }
     .reviews-actions {
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       gap: 14px;
+      align-items: center;
     }
     .btn-secondary {
       display: inline-block;
@@ -538,6 +539,8 @@
       .menu-tabs { flex-wrap: wrap; }
       .hero-logo { width: 240px; }
       .hero-gallery { grid-template-columns: 1fr; gap: 16px; margin-top: 50px; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .reviews-actions { flex-wrap: wrap; }
     }
     .visually-hidden {
       position: absolute;
@@ -694,46 +697,47 @@
           <p style="margin-top:12px;">Parkeren is gratis mogelijk in het centrum van Balk.</p>
         </div>
 
-        <div id="reviews" class="contact-reviews" aria-labelledby="reviews-heading">
-          <p class="section-label">Google Reviews</p>
-          <h2 id="reviews-heading" class="section-title">Wat gasten over ons zeggen</h2>
-          <div class="divider"></div>
-
-          <p class="reviews-intro">
-            We tonen hier losse gastreacties en verwijzen je direct naar Google voor alle actuele beoordelingen.
-          </p>
-
-          <div class="reviews-grid" aria-label="Google reviews informatieblokken">
-            <article class="review-card">
-              <p class="review-stars" aria-hidden="true">★★★★★</p>
-              <p>Bekijk op Google de meest recente beoordelingen van onze gasten.</p>
-              <p class="review-author">Actuele reviews</p>
-            </article>
-
-            <article class="review-card">
-              <p class="review-stars" aria-hidden="true">★★★★★</p>
-              <p>Lees ervaringen over sfeer, service, lunch en diner bij De Dames.</p>
-              <p class="review-author">Gastenervaringen</p>
-            </article>
-
-            <article class="review-card">
-              <p class="review-stars" aria-hidden="true">★★★★★</p>
-              <p>Wil je zelf een reactie achterlaten? Dat kan direct via onze Google vermelding.</p>
-              <p class="review-author">Zelf review plaatsen</p>
-            </article>
-          </div>
-
-          <div class="reviews-actions">
-            <a href="https://www.google.com/search?q=Eetcaf%C3%A9+De+Dames+Balk+reviews" target="_blank" rel="noopener" class="btn-primary" aria-label="Bekijk alle Google reviews van Eetcafé De Dames">Bekijk alle reviews op Google</a>
-            <a href="https://www.google.com/search?q=Eetcaf%C3%A9+De+Dames+Balk" target="_blank" rel="noopener" class="btn-secondary" aria-label="Open Eetcafé De Dames op Google">Open op Google</a>
-          </div>
-        </div>
       </address>
 
       <div class="map-placeholder">
         <span aria-hidden="true">&#128506;</span>
         <p><strong>Restaurant Balk — Eetcafé De Dames</strong><br>Meerweg 3<br>8561 AN Balk, Friesland</p>
         <a href="https://www.google.com/maps/search/?api=1&query=Meerweg+3+8561+AN+Balk" target="_blank" rel="noopener" aria-label="Open restaurant Balk Eetcafé De Dames in Google Maps">Open in Google Maps</a>
+      </div>
+    </div>
+
+    <div id="reviews" class="contact-reviews" aria-labelledby="reviews-heading">
+      <p class="section-label">Google Reviews</p>
+      <h2 id="reviews-heading" class="section-title">Wat gasten over ons zeggen</h2>
+      <div class="divider"></div>
+
+      <p class="reviews-intro">
+        We tonen hier losse gastreacties en verwijzen je direct naar Google voor alle actuele beoordelingen.
+      </p>
+
+      <div class="reviews-grid" aria-label="Google reviews informatieblokken">
+        <article class="review-card">
+          <p class="review-stars" aria-hidden="true">★★★★★</p>
+          <p>Bekijk op Google de meest recente beoordelingen van onze gasten.</p>
+          <p class="review-author">Actuele reviews</p>
+        </article>
+
+        <article class="review-card">
+          <p class="review-stars" aria-hidden="true">★★★★★</p>
+          <p>Lees ervaringen over sfeer, service, lunch en diner bij De Dames.</p>
+          <p class="review-author">Gastenervaringen</p>
+        </article>
+
+        <article class="review-card">
+          <p class="review-stars" aria-hidden="true">★★★★★</p>
+          <p>Wil je zelf een reactie achterlaten? Dat kan direct via onze Google vermelding.</p>
+          <p class="review-author">Zelf review plaatsen</p>
+        </article>
+      </div>
+
+      <div class="reviews-actions">
+        <a href="https://www.google.com/search?q=Eetcaf%C3%A9+De+Dames+Balk+reviews" target="_blank" rel="noopener" class="btn-primary" aria-label="Bekijk alle Google reviews van Eetcafé De Dames">Bekijk alle reviews op Google</a>
+        <a href="https://www.google.com/search?q=Eetcaf%C3%A9+De+Dames+Balk" target="_blank" rel="noopener" class="btn-secondary" aria-label="Open Eetcafé De Dames op Google">Open op Google</a>
       </div>
     </div>
   </div>
