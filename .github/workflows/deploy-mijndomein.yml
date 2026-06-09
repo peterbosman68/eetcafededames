@@ -1,4 +1,4 @@
-name: Deploy naar Mijndomein
+name: Deploy naar Strato
 
 on:
   push:
@@ -14,14 +14,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Upload website via SFTP
+      - name: Upload website via FTPS
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: sftp
-          port: 22
+          protocol: ftps
+          port: 21
           local-dir: ./
           server-dir: ${{ secrets.FTP_SERVER_DIR }}
           exclude: |
