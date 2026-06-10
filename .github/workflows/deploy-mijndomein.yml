@@ -14,19 +14,29 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Installeer lftp
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y lftp
+
       - name: Maak deploy-map
         run: |
           mkdir -p deploy
           cp index.html deploy/
           cp -R Website-De-Dames_5_images deploy/
 
-      - name: Upload website via SSH
-        uses: appleboy/scp-action@v1
-        with:
-          host: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          port: 22
-          source: deploy/*
-          target: ${{ secrets.FTP_SERVER_DIR }}/
-          overwrite: true
+      - name: Upload website via SFTP
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          FTP_SERVER_DIR: ${{ secrets.FTP_SERVER_DIR }}
+        run: |
+          lftp -u "$FTP_USERNAME","$FTP_PASSWORD" "sftp://$FTP_SERVER:22" <<EOF
+          set net:max-retries 2
+          set net:timeout 20
+          set sftp:auto-confirm yes
+          set cmd:fail-exit yes
+          mirror --reverse --verbose --delete --exclude-glob .git* --exclude-glob .github --exclude-glob Oud deploy "$FTP_SERVER_DIR"
+          quit
+          EOF
