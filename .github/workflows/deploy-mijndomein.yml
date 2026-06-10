@@ -39,6 +39,6 @@ jobs:
           set net:timeout 20
           set sftp:auto-confirm yes
           set cmd:fail-exit yes
-          mirror --reverse --verbose --delete --exclude-glob .git* --exclude-glob .github --exclude-glob Oud deploy "$FTP_SERVER_DIR"
+          mirror --reverse --verbose --delete --exclude-glob .git* --exclude-glob .github --exclude-glob Oud deploy "/site"
           quit
           EOF
