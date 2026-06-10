@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="220" viewBox="0 0 900 220" role="img" aria-label="Instagram logo" style="background-color: transparent;">
+  <defs>
+    <linearGradient id="igGradient" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F58529"/>
+      <stop offset="45%" stop-color="#DD2A7B"/>
+      <stop offset="75%" stop-color="#8134AF"/>
+      <stop offset="100%" stop-color="#515BD4"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="220" fill="none"/>
+  <g transform="translate(20,20)">
+    <rect x="0" y="0" width="180" height="180" rx="44" fill="url(#igGradient)"/>
+    <rect x="38" y="38" width="104" height="104" rx="30" fill="none" stroke="#fff" stroke-width="12"/>
+    <circle cx="90" cy="90" r="27" fill="none" stroke="#fff" stroke-width="12"/>
+    <circle cx="132" cy="48" r="10" fill="#fff"/>
+  </g>
+  <text x="230" y="145" font-family="Trebuchet MS, Arial, sans-serif" font-size="118" font-weight="700" fill="#111">Instagram</text>
+</svg>

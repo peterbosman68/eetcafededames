@@ -426,6 +426,88 @@
       margin-bottom: 8px;
     }
     .contact-info a { color: var(--warm-tan); text-decoration: none; }
+    .contact-social-card {
+      margin-top: 18px;
+      width: min(980px, 100%);
+      border: 1px solid rgba(201,169,122,0.28);
+      border-radius: 16px;
+      background: transparent;
+      box-shadow: 0 14px 36px rgba(0,0,0,0.28);
+      padding: 22px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+    .contact-social-col {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .contact-social-col h3 {
+      font-family: 'Lato', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--warm-tan);
+      margin: 0;
+    }
+    .contact-social-links {
+      list-style: none;
+      display: grid;
+      gap: 14px;
+      margin: 0;
+      padding: 0;
+    }
+    .contact-social-links a,
+    .contact-review-link {
+      display: flex;
+      align-items: center;
+      width: fit-content;
+      min-height: 52px;
+      position: relative;
+      padding-bottom: 6px;
+      text-decoration: none;
+      transition: transform 140ms ease;
+    }
+    .contact-social-links a::after,
+    .contact-review-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 1px;
+      background: rgba(255,255,255,0.42);
+      transition: background-color 140ms ease, box-shadow 140ms ease;
+    }
+    .contact-social-links a:hover,
+    .contact-review-link:hover {
+      transform: translateX(4px);
+    }
+    .contact-social-links a:hover::after,
+    .contact-review-link:hover::after {
+      background: var(--warm-tan);
+      box-shadow: 0 0 10px rgba(201,169,122,0.75);
+    }
+    .contact-social-logo {
+      width: auto;
+      height: auto;
+      max-height: 56px;
+      max-width: min(100%, 250px);
+      object-fit: contain;
+      display: block;
+    }
+    .contact-social-logo-facebook { max-width: 240px; }
+    .contact-social-logo-instagram { max-width: 210px; }
+    .contact-social-logo-google { max-width: 250px; }
+    .contact-review-logo {
+      width: auto;
+      height: auto;
+      max-height: 64px;
+      max-width: min(100%, 300px);
+      object-fit: contain;
+      display: block;
+    }
     .contact-omgeving {
       margin-top: 28px;
       padding-top: 24px;
@@ -471,6 +553,7 @@
       nav ul li a { font-size: 0.72rem; }
       nav .nav-logo img { height: 36px; }
       .over-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .contact-social-card { grid-template-columns: 1fr; gap: 22px; }
       .over-card { min-height: 320px; padding: 40px 24px; }
       .over-card img { width: 180px; }
       .menu-tabs { flex-wrap: wrap; }
@@ -614,20 +697,38 @@
         Zaterdag: 11:00 – 22:00<br>
         Zondag: 11:00 – 22:00</p>
         <br>
-        <p><strong>Volg ons op Instagram:</strong>
-        <a href="https://www.instagram.com/eetcafededames/" target="_blank" rel="noopener" aria-label="Instagram Eetcafé De Dames restaurant Balk">@eetcafededames</a></p>
+        <div class="contact-social-card" aria-label="Social media en reviews">
+          <div class="contact-social-col">
+            <h3>Volg ons:</h3>
+            <ul class="contact-social-links">
+              <li>
+                <a href="https://www.facebook.com/profile.php?id=61563228695516" target="_blank" rel="noopener" aria-label="Facebook Eetcafé De Dames restaurant Balk">
+                  <img class="contact-social-logo contact-social-logo-facebook" src="Website-De-Dames_5_images/facebook.svg" alt="Facebook" />
+                  <span class="visually-hidden">Facebook</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/eetcafededames/" target="_blank" rel="noopener" aria-label="Instagram Eetcafé De Dames restaurant Balk">
+                  <img class="contact-social-logo contact-social-logo-instagram" src="Website-De-Dames_5_images/instagram.svg?v=2" alt="Instagram" />
+                  <span class="visually-hidden">Instagram</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.google.com/search?sca_esv=623319d2222e0c90&sxsrf=ANbL-n520ykP_bQrL1qa8Xe_69Ac00-bpg:1781011102913&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-yoKoZ3XF2cPrwZ0FJmQ0ZVGstg4Z908BRPacgWZ9aSXry_c7I2qi2OY9rjR6a0sj-zYgKKPPIIzEITzprXIczfwAgAZuxPi5c4ACKYbYIv4IrZD9GK1Q4pwyUoHphQ2unkjGchBxzSpYs0n9-VaUMQpUGLkh_gLz2oyFvKLm4gzj9TzLOjEEBfgCCOtfxbk0XbOQbUSJw5JpKQ84TFcPiRrzTDLY4lKLaVi7Q0I7y6yHvWB-62lWcnkKSM2ucKRceBuqe5MhKQIOUQ-EtRx30tHGIZS0f2RaBwPPAYQ5hsThvNG5kl3t5SeIMjwFyryNw5hL9Q&q=Eetcaf%C3%A9+De+Dames+Reviews&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOWvrDZOXilfc___1qBw_6vZCXOWZ--G-gWVeN1zjzARvEIHL6d_kp6xuNS4Pb59PKhwYyhjTkdWVcLdCiemJqUFiH1wc4b9DNS01s-1p2H4jeiherQ%3D%3D&hl=nl-NL&sa=X&ved=2ahUKEwisgYWxn_qUAxXggf0HHXf7GBAQ_4MLegQIJRAM&biw=1488&bih=695&dpr=1.25" target="_blank" rel="noopener" aria-label="Google Reviews Eetcafé De Dames restaurant Balk">
+                  <img class="contact-social-logo contact-social-logo-google" src="Website-De-Dames_5_images/google-reviews.svg" alt="Google Reviews" />
+                  <span class="visually-hidden">Google Reviews</span>
+                </a>
+              </li>
+            </ul>
+          </div>
 
-        <p><strong>Volg ons op Facebook:</strong>
-        <a href="https://www.facebook.com/profile.php?id=61563228695516" target="_blank" rel="noopener" aria-label="Facebook Eetcafé De Dames restaurant Balk">@eetcafededames</a><br>
-          </p>
-
-        <p><strong>Bekijk onze reviews:</strong>
-        <a href="https://www.google.com/search?sca_esv=623319d2222e0c90&sxsrf=ANbL-n520ykP_bQrL1qa8Xe_69Ac00-bpg:1781011102913&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-yoKoZ3XF2cPrwZ0FJmQ0ZVGstg4Z908BRPacgWZ9aSXry_c7I2qi2OY9rjR6a0sj-zYgKKPPIIzEITzprXIczfwAgAZuxPi5c4ACKYbYIv4IrZD9GK1Q4pwyUoHphQ2unkjGchBxzSpYs0n9-VaUMQpUGLkh_gLz2oyFvKLm4gzj9TzLOjEEBfgCCOtfxbk0XbOQbUSJw5JpKQ84TFcPiRrzTDLY4lKLaVi7Q0I7y6yHvWB-62lWcnkKSM2ucKRceBuqe5MhKQIOUQ-EtRx30tHGIZS0f2RaBwPPAYQ5hsThvNG5kl3t5SeIMjwFyryNw5hL9Q&q=Eetcaf%C3%A9+De+Dames+Reviews&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOWvrDZOXilfc___1qBw_6vZCXOWZ--G-gWVeN1zjzARvEIHL6d_kp6xuNS4Pb59PKhwYyhjTkdWVcLdCiemJqUFiH1wc4b9DNS01s-1p2H4jeiherQ%3D%3D&hl=nl-NL&sa=X&ved=2ahUKEwisgYWxn_qUAxXggf0HHXf7GBAQ_4MLegQIJRAM&biw=1488&bih=695&dpr=1.25" target="_blank" rel="noopener" aria-label="Google Reviews Eetcafé De Dames restaurant Balk">Google Reviews</a><br>
-          </p>
-
-        <p><strong>Schrijf een review:</strong>
-        <a href="https://www.google.com/search?sca_esv=623319d2222e0c90&hl=nl-NL&sxsrf=ANbL-n42d3XW7EBuP7p4-m5ddaoOCPEvcQ:1781012012126&q=Eetcaf%C3%A9+De+Dames&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOWvrDZOXilfc___1qBw_6vYsvp3AoFfsFl7xmjToI2slROZS4ULhNwg13bw4Ca4nq7KK5l0%3D&uds=ALYpb_lYhTQoihMExfBHVPUjHWLhn3n_-VjJLAiti6xlclVIQvCEB44XYVtj-4jrdLGJ6Nh4XljIQ2t6uasZnWCOTP64tsv0-VEVm54vJwVdTLmxFkPtpNk&sa=X&ved=2ahUKEwif8sriovqUAxWqg_0HHX6dD_EQ3PALegQIGRAE&biw=1488&bih=695&dpr=1.25" target="_blank" rel="noopener" aria-label="Schrijf een Google review voor Eetcafé De Dames restaurant Balk">klik hier om een review te schrijven</a><br>
-          </p>
+          <div class="contact-social-col">
+            <h3>Schrijf een review op:</h3>
+            <a class="contact-review-link" href="https://www.google.com/search?sca_esv=623319d2222e0c90&hl=nl-NL&sxsrf=ANbL-n42d3XW7EBuP7p4-m5ddaoOCPEvcQ:1781012012126&q=Eetcaf%C3%A9+De+Dames&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOWvrDZOXilfc___1qBw_6vYsvp3AoFfsFl7xmjToI2slROZS4ULhNwg13bw4Ca4nq7KK5l0%3D&uds=ALYpb_lYhTQoihMExfBHVPUjHWLhn3n_-VjJLAiti6xlclVIQvCEB44XYVtj-4jrdLGJ6Nh4XljIQ2t6uasZnWCOTP64tsv0-VEVm54vJwVdTLmxFkPtpNk&sa=X&ved=2ahUKEwif8sriovqUAxWqg_0HHX6dD_EQ3PALegQIGRAE&biw=1488&bih=695&dpr=1.25" target="_blank" rel="noopener" aria-label="Schrijf een Google review voor Eetcafé De Dames restaurant Balk">
+              <img class="contact-review-logo" src="Website-De-Dames_5_images/google-reviews.svg" alt="Google Reviews" />
+            </a>
+          </div>
+        </div>
       </address>
 
       <div class="map-placeholder">

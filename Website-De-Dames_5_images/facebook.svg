@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="220" viewBox="0 0 900 220" role="img" aria-label="Facebook logo">
+  <rect width="900" height="220" fill="none"/>
+  <g transform="translate(20,20)">
+    <rect x="0" y="0" width="180" height="180" rx="30" fill="#1877F2"/>
+    <path d="M107 56h28V24h-29c-32 0-53 21-53 53v23H29v31h24v65h34v-65h30l5-31H87V82c0-16 7-26 20-26z" fill="#fff"/>
+  </g>
+  <text x="230" y="145" font-family="Arial, Helvetica, sans-serif" font-size="140" font-weight="700" fill="#1877F2">facebook</text>
+</svg>

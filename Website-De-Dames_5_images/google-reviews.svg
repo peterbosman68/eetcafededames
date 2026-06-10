@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="280" viewBox="0 0 980 280" role="img" aria-label="Google Reviews logo">
+  <rect width="980" height="280" fill="none"/>
+  <g transform="translate(18,20)">
+    <text x="0" y="140" font-family="Arial, Helvetica, sans-serif" font-size="160" fill="#4285F4">G</text>
+    <text x="112" y="140" font-family="Arial, Helvetica, sans-serif" font-size="160" fill="#EA4335">o</text>
+    <text x="205" y="140" font-family="Arial, Helvetica, sans-serif" font-size="160" fill="#FBBC05">o</text>
+    <text x="298" y="140" font-family="Arial, Helvetica, sans-serif" font-size="160" fill="#4285F4">g</text>
+    <text x="391" y="140" font-family="Arial, Helvetica, sans-serif" font-size="160" fill="#34A853">l</text>
+    <text x="435" y="140" font-family="Arial, Helvetica, sans-serif" font-size="160" fill="#EA4335">e</text>
+
+    <text x="0" y="235" font-family="Arial, Helvetica, sans-serif" font-size="100" font-weight="700" fill="#6E7074">Reviews</text>
+
+    <g transform="translate(470,165) scale(1.15)">
+      <polygon points="22,0 28,14 44,14 31,23 36,39 22,29 8,39 13,23 0,14 16,14" fill="#F4B400"/>
+      <polygon points="78,0 84,14 100,14 87,23 92,39 78,29 64,39 69,23 56,14 72,14" fill="#F4B400"/>
+      <polygon points="134,0 140,14 156,14 143,23 148,39 134,29 120,39 125,23 112,14 128,14" fill="#F4B400"/>
+      <polygon points="190,0 196,14 212,14 199,23 204,39 190,29 176,39 181,23 168,14 184,14" fill="#F4B400"/>
+      <polygon points="246,0 252,14 268,14 255,23 260,39 246,29 232,39 237,23 224,14 240,14" fill="#F4B400"/>
+    </g>
+  </g>
+</svg>
