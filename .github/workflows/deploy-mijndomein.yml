@@ -25,6 +25,7 @@ jobs:
         run: |
           mkdir -p deploy
           cp index.html deploy/
+          cp indextest.html deploy/
           cp -R Website-De-Dames_5_images deploy/
 
       - name: Upload website via SFTP
