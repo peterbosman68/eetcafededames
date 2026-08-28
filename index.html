@@ -25,7 +25,7 @@
   <!-- Primary Meta Tags — SEO geoptimaliseerd voor "restaurant Balk" -->
   <title>Eetcafé De Dames Balk | Lunch, Diner en Borrel in Friesland</title>
   <meta name="title" content="Eetcafé De Dames Balk | Lunch, Diner en Borrel in Friesland" />
-  <meta name="description" content="Eetcafé De Dames in Balk (Friesland): gezellig lunchen, dineren en borrelen aan de Meerweg 3. Geopend wo-zo van 11:00 tot 22:00. Reserveer via 0514-850007." />
+    <meta name="description" content="Eetcafé De Dames in Balk: lunch, diner, borrel en groepsfeesten aan de Meerweg 3. Geopend wo-zo van 11:00 tot 22:00. Reserveer via 0514-850007." />
   <meta name="author" content="Eetcafé De Dames" />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
   <meta name="googlebot" content="index, follow" />
@@ -43,10 +43,10 @@
   <link rel="sitemap" type="application/xml" href="https://www.eetcafededames.nl/sitemap.xml" />
 
   <!-- Open Graph / Facebook / WhatsApp -->
-  <meta property="og:type" content="restaurant" />
+    <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.eetcafededames.nl/" />
   <meta property="og:title" content="Eetcafé De Dames Balk | Lunch, Diner en Borrel" />
-  <meta property="og:description" content="Eetcafé De Dames in Balk: lunch, diner en borrel in een warme sfeer. Geopend wo-zo van 11:00 tot 22:00 aan de Meerweg 3." />
+    <meta property="og:description" content="Eetcafé De Dames in Balk: lunch, diner, borrel en groepsfeesten in een warme sfeer. Geopend wo-zo van 11:00 tot 22:00." />
   <meta property="og:image" content="https://www.eetcafededames.nl/Website-De-Dames_5_images/interieur.jpeg" />
   <meta property="og:image:alt" content="Interieur van Eetcafe De Dames in Balk, Friesland" />
   <meta property="og:locale" content="nl_NL" />
@@ -56,7 +56,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://www.eetcafededames.nl/" />
   <meta name="twitter:title" content="Eetcafé De Dames Balk | Lunch en Diner" />
-  <meta name="twitter:description" content="Lunchen, dineren en borrelen in Balk, Friesland. Eetcafé De Dames is geopend wo-zo van 11:00 tot 22:00." />
+    <meta name="twitter:description" content="Lunchen, dineren, borrelen en groepsfeesten in Balk, Friesland. Eetcafé De Dames is geopend wo-zo van 11:00 tot 22:00." />
   <meta name="twitter:image" content="https://www.eetcafededames.nl/Website-De-Dames_5_images/interieur.jpeg" />
   <meta name="twitter:image:alt" content="Interieur van Eetcafe De Dames in Balk, Friesland" />
 
@@ -68,7 +68,7 @@
     "@id": "https://www.eetcafededames.nl/#restaurant",
     "name": "Eetcafé De Dames",
     "alternateName": ["De Dames Balk", "Restaurant Balk De Dames", "Eetcafe De Dames"],
-    "description": "Eetcafé De Dames is een gezellig restaurant in Balk, Friesland, gelegen aan de Meerweg 3 (8561 AN). Het restaurant biedt lunch, diner en borrelen in een huiselijke, Friese sfeer. Populaire keuzes: broodjes, tosti's, salades, schnitzel, zalmfilet en de Swiete Dame als toetje. Open woensdag t/m zondag van 11:00 tot 22:00 uur. Ideaal voor een dagje Gaasterland, een fietstocht door Friesland of gewoon uit eten in Balk.",
+    "description": "Eetcafé De Dames is een gezellig restaurant in Balk, Friesland, gelegen aan de Meerweg 3 (8561 AN). Het restaurant biedt lunch, diner en borrelen in een huiselijke, Friese sfeer. Voor groepen vanaf ongeveer 25 personen is er ook ruimte voor een besloten feest of partij zonder zaalkosten. Open woensdag t/m zondag van 11:00 tot 22:00 uur.",
     "url": "https://www.eetcafededames.nl/",
     "telephone": "+31514850007",
     "email": "eetcafededames@hotmail.com",
@@ -127,6 +127,14 @@
     ],
     "paymentAccepted": ["Cash", "Credit Card", "Debit Card", "PIN"],
     "currenciesAccepted": "EUR",
+    "makesOffer": {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Groepsfeesten en besloten partijen",
+        "description": "Besloten feesten en partijen vanaf ongeveer 25 personen, zonder zaalkosten."
+      }
+    },
     "sameAs": [
       "https://www.instagram.com/eetcafededames/",
       "https://www.facebook.com/profile.php?id=61563228695516",
@@ -559,6 +567,8 @@
       .menu-tabs { flex-wrap: wrap; }
       .hero-logo { width: 240px; }
       .hero-gallery { grid-template-columns: 1fr; gap: 16px; margin-top: 50px; }
+        .partijen-section { grid-template-columns: 1fr !important; min-height: 0 !important; }
+        .partijen-section figure { height: auto !important; min-height: 300px; }
     }
     .visually-hidden {
       position: absolute;
@@ -579,7 +589,8 @@
     <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="#over">Over Ons</a></li>
-      <li><a href="#menu">Aanbod</a></li>
+        <li><a href="#menu">Menu</a></li>
+      <li><a href="groepsfeesten-test.html">Feesten &amp; Partijen</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -669,10 +680,10 @@
     <!-- Partijen en private events sectie -->
     <div class="partijen-section" style="margin-top:60px; display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:stretch; min-height:400px;">
       <div style="padding:40px; background:rgba(201,169,122,0.12); border-radius:6px; border-left:4px solid var(--warm-tan);">
-        <h3 style="font-family:'Playfair Display', serif; font-size:clamp(1.8rem, 4vw, 2.8rem); color:var(--warm-tan); margin-bottom:16px;">Groepsfeesten &amp; Besloten Partijen</h3>
+          <h3 style="font-family:'Playfair Display', serif; font-size:clamp(1.8rem, 4vw, 2.8rem); color:var(--warm-tan); margin-bottom:16px;">Groepsfeest of besloten partij? Vier het bij De Dames in Balk</h3>
         <p style="font-size:1.05rem; line-height:1.8; color:var(--light-tan); margin-bottom:14px;">Op zoek naar een gezellige locatie voor een verjaardag, jubileum, familiefeest of een andere gelegenheid?</p>
-        <p style="font-size:1.05rem; line-height:1.8; color:var(--light-tan); margin-bottom:14px;">We bieden vanaf ongeveer 25 personen de mogelijkheid om een besloten feest of partij te organiseren (geen zaalkosten). Benieuwd naar de mogelijkheden? Neem contact met ons op, we denken graag met je mee!</p>
-        <a href="#contact" class="btn-primary" aria-label="Neem contact op voor informatie over groepsfeesten">Neem contact op</a>
+          <p style="font-size:1.05rem; line-height:1.8; color:var(--light-tan); margin-bottom:14px;">We bieden vanaf ongeveer 25 personen de mogelijkheid om een besloten feest of partij te organiseren (geen zaalkosten). Ook voor een bedrijfsfeest, personeelsfeest of jubileumfeest denken we graag met je mee.</p>
+          <a href="groepsfeesten-test.html" class="btn-primary" aria-label="Bekijk de mogelijkheden voor groepsfeesten en besloten partijen">Bekijk de mogelijkheden</a>
       </div>
       <figure style="margin:0; overflow:hidden; border-radius:6px; box-shadow:0 10px 36px rgba(0,0,0,0.35); border:2px solid var(--warm-tan); height:100%;">
         <img src="Website-De-Dames_5_images/Groepsfeesten.jpg" alt="Groepsfeest bij Eetcafé De Dames in Balk" style="width:100%; height:100%; object-fit:cover; display:block;" loading="lazy" />
