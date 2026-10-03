@@ -1,0 +1,41 @@
+name: Herstel website na tijdelijke sluiting
+
+on:
+  schedule:
+    - cron: "0 7 30-31 10 *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Herstel vorige versie en deploy naar Strato
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CLOSURE_COMMIT: b0eceb1
+        run: |
+          if [[ "$(date -u +%F)" < "2026-10-30" ]]; then
+            echo "De herstelactie is pas vanaf 30 oktober 2026 toegestaan."
+            exit 0
+          fi
+
+          target_commit="$(git rev-parse "$CLOSURE_COMMIT")"
+          if git log origin/main --format=%B | grep -Fq "This reverts commit ${target_commit}."; then
+            echo "De tijdelijke sluitingsmelding is al teruggedraaid."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git revert --no-edit "$target_commit"
+          git push origin HEAD:main
+          gh workflow run deploy-mijndomein.yml --ref main
